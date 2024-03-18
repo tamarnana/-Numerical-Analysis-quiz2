@@ -32,7 +32,7 @@ def bisection_method(f, a, b, tol=1e-6):
     c, k = 0, 0
     steps = max_steps(a, b, tol)  # calculate the max steps possible
 
-    print("{:<10} {:<15} {:<15} {:<15} {:<15} {:<15} {:<15}".format("Iteration", "a", "b", "f(a)", "f(b)", "c", "f(c)"))
+    #print("{:<10} {:<15} {:<15} {:<15} {:<15} {:<15} {:<15}".format("Iteration", "a", "b", "f(a)", "f(b)", "c", "f(c)"))
 
     # while the diff af a&b is not smaller than tol, and k is not greater than the max possible steps
     while abs(b - a) > tol and k < steps:
@@ -46,7 +46,7 @@ def bisection_method(f, a, b, tol=1e-6):
         else:
             a = c  # move backward
 
-        print("{:<10} {:<15.6f} {:<15.6f} {:<15.6f} {:<15.6f} {:<15.6f} {:<15.6f}".format(k, a, b, f(a), f(b), c, f(c)))
+        #print("{:<10} {:<15.6f} {:<15.6f} {:<15.6f} {:<15.6f} {:<15.6f} {:<15.6f}".format(k, a, b, f(a), f(b), c, f(c)))
         k += 1
 
     return c  # return the current root
